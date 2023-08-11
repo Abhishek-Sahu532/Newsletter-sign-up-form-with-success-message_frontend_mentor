@@ -1,190 +1,254 @@
-body{
-    background-color:  hsl(235, 18%, 26%);
-    padding: 0;
-    margin: 0;
+body {
+  background-color: hsl(235, 18%, 26%);
+  padding: 0;
+  margin: 0;
 }
 
-main{
-    height: 530px;
-    width: 850px;
-    max-width: 1100px;
-    background-color:  hsl(0, 0%, 100%);
+main {
+  height: 530px;
+  width: 850px;
+  max-width: 1100px;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.txt-section {
+  padding: 35px 80px;
+}
+
+.txt-section h1 {
+  font-family: Roboto-Bold, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+  margin: 0;
+}
+
+.txt-section #paragraph {
+  font-family: Roboto-Regular, sans-serif;
+  color: hsl(235, 18%, 26%);
+  margin-top: 10px;
+  line-height: 25px;
+}
+
+.mobileImgSection {
+  display: none;
+}
+
+/*CSS START FOR MOBILE DEVICE */
+
+@media screen and (max-width: 450px) {
+  body{
+    background-color: hsl(0, 0%, 100%);
+  }
+  .mobileImgSection {
+    display: block;
+    
+  }
+  .mobileImgSection img{
+    width: 100vw;
+    height: auto;
+  }
+  .imgSection {
+    display: none;
+  }
+
+  main {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 20px;
+    flex-direction: column;
+    background-color: none;
+    height: 800px;
+    padding: 20px;
+    background-color: none;
+    width: 100vw;
+    border-radius: 0;
+  }
+  .txt-section {
+  margin: 0;
+  padding: 20px;
 }
-
-
-.txt-section{
- margin: 35px 80px ;
-
-}
-
-.txt-section h1{
-    font-family: Roboto-Bold, sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
+  .txt-section h1 {
+    font-size: 3rem;
     color: hsl(234, 29%, 20%);
-    margin: 0;
-}
+  }
 
-.txt-section #paragraph{
-    font-family: Roboto-Regular, sans-serif;
-    color: hsl(235, 18%, 26%);
+  .txt-section #paragraph {
     margin-top: 10px;
     line-height: 25px;
+    word-wrap: break-word;
+  }
 
 }
 
-.productDesc{
-    position: relative;
-    margin-left: 35px;
-    margin-top: -38px;
+/*CSS END FOR MOBILE DEVICE */
+
+.productDesc {
+  position: relative;
+  margin-left: 35px;
+  margin-top: -38px;
 }
 
-table tr td p{
-    margin-left: 15px;
-    font-size: 16px;
-    color:  hsl(235, 18%, 26%);
-    font-family: Roboto-Regular, sans-serif;
+table tr td p {
+  margin-left: 15px;
+  font-size: 16px;
+  color: hsl(235, 18%, 26%);
+  font-family: Roboto-Regular, sans-serif;
 }
 
+.emailForm label {
+  font-family: Roboto-Bold, sans-serif;
+  font-size: 14px;
+  color: hsl(235, 18%, 26%);
+  font-weight: 600;
+}
 
-/* .emailForm{
-    margin-top: 20px;
-} */
+.emailForm input {
+  width: 350px;
+  /* margin-top: 8px; */
+  height: 40px;
+  border: 1px solid hsl(235, 18%, 26%);
+  border-radius: 5px;
+}
 
-.emailForm label{
-    font-family: Roboto-Bold, sans-serif;
+.emailForm input[type="email"] {
+  padding-left: 25px;
+  font-family: Roboto-Regular;
+  font-size: 16px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.emailForm button {
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  padding: 20px 65px;
+  font-family: Roboto-Bold, sans-serif;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.emailForm button:hover {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 0px 7px hsla(4, 100%, 67%, 0.3);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  .emailForm input {
+    width: 70vw;
+    height: 15px;
+    padding: 15px;
+  }
+
+  .emailForm button {
+    padding: 15px;
+    width: 80vw;
     font-size: 14px;
-    color:  hsl(235, 18%, 26%);
-    font-weight: 600;
-}
+  }
 
-
-.emailForm  input{
-    width: 350px;
-    /* margin-top: 8px; */
-    height: 40px;
-    border: 1px solid hsl(235, 18%, 26%);
-    border-radius: 5px;
-}
-
-.emailForm input[type="email"]{
-    padding-left: 25px;
-    font-family: Roboto-Regular;
-    font-size: 16px;
-    font-weight: bolder;
-    cursor: pointer;
-}
-
-
-.emailForm  button{
-    background-color:hsl(234, 29%, 20%);
-    color:  hsl(0, 0%, 100%);
-    margin-top: 20px;
-    border-radius: 5px;
-    border: none;
-    padding: 20px 65px;
-    font-family: Roboto-Bold, sans-serif;
-    font-weight: bolder;
-    cursor: pointer;
-    font-size: 16px;
-    word-wrap:break-word;
-    
-}
-
-.emailForm  button:hover{
-    background-color: hsl(4, 100%, 67%);
-    box-shadow: 0px 7px hsla(4, 100%, 67%,0.3);
-    cursor: pointer;
 }
 
 /* IMAGE SECTION */
 
-.imgSection img{
-   width: 100%;
-   height: 600px;
-   margin-top: -30px;
-   margin-left:-45px ;
+.imgSection img {
+  width: 100%;
+  height: 600px;
+  margin-top: -30px;
+  margin-left: -45px;
 }
 
-.labelNerror{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+.labelNerror {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-#emailError{
-    margin: 0;
-    margin-right: 25px;
-    color: hsl(4, 100%, 67%);
-    font-size: 16px;
-    font-weight: 600;
-    display: none;
+#emailError {
+  margin: 0;
+  margin-right: 25px;
+  color: hsl(4, 100%, 67%);
+  font-size: 16px;
+  font-weight: 600;
+  display: none;
 }
-
-
-
-
 
 /* SUCCESS PART CSS */
 
-.successmain{
-    background-color: hsl(0, 0%, 100%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    padding: 20px 50px;
-    width: 300px;
-    height: 370px;
-    border-radius: 15px;
-    display: none;
+.successmain {
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 50px;
+  width: 300px;
+  height: 370px;
+  border-radius: 15px;
+  display: none;
+}
+
+.successmain .icon img {
+  width: 45px;
+  height: 45px;
+  margin-top: 10px;
+}
+
+.successmain .heading {
+  font-family: Roboto-bold, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  color: hsl(235, 18%, 26%);
+  font-weight: 900;
+}
+
+.successmain .successMsg {
+  color: hsl(235, 18%, 26%);
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Roboto-Regular, sans-serif;
+  font-weight: 500;
+}
+
+.successmain .dismissBtn button {
+  width: 300px;
+  height: 40px;
+  border-radius: none;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+}
+
+.successmain .dismissBtn button:hover {
+  background-color: hsl(4, 100%, 67%);
 }
 
 
-.successmain .icon img{
-    width: 45px;
-    height: 45px;
-    margin-top: 10px;
-}
 
+/*CSS START FOR MOBILE DEVICE */
 
-.successmain .heading{
-    font-family: Roboto-bold, sans-serif;
-    font-size: 22px;
-    margin: 0;
-    color:  hsl(235, 18%, 26%);
-    font-weight: 900;
-}
+@media screen and (max-width:450px) {
+  .successmain{
+    /* position: fixed; */
+    display: block;  
+  margin: 20px 50px;
+  /* width: 100vw;
+  height: 100vh; */
+  margin: 0;
 
-
-.successmain .successMsg{
-    color:  hsl(235, 18%, 26%);
-    font-size: 14px;
-    line-height: 20px;
-    font-family: Roboto-Regular, sans-serif;
-    font-weight: 500;
-}
-
-.successmain .dismissBtn button{
-width: 300px;
-height: 40px;
-border-radius: none;
-background-color: hsl(234, 29%, 20%);
-color: hsl(0, 0%, 100%);
-font-size: 16px;
-border: none;
-border-radius: 10px;
-}
-
-.successmain .dismissBtn button:hover{
-    background-color: hsl(4, 100%, 67%);
+  display: none;
+  }
 }
